@@ -15,11 +15,11 @@ ORDER BY a.id_alternative";
 $result = $db->query($sql);
 $X = array(1 => array(), 2 => array(), 3 => array(), 4 => array(), 5 => array());
 while ($row = $result->fetch_object()) {
-    array_push($X[1], round($row->C1, 2));
-    array_push($X[2], round($row->C2, 2));
-    array_push($X[3], round($row->C3, 2));
-    array_push($X[4], round($row->C4, 2));
-    array_push($X[5], round($row->C5, 2));
+  array_push($X[1], round($row->C1, 2));
+  array_push($X[2], round($row->C2, 2));
+  array_push($X[3], round($row->C3, 2));
+  array_push($X[4], round($row->C4, 2));
+  array_push($X[5], round($row->C5, 2));
 }
 $result->free();
 
@@ -79,5 +79,5 @@ $sql = "SELECT
 $result = $db->query($sql);
 $R = array();
 while ($row = $result->fetch_object()) {
-    $R[$row->id_alternative] = array($row->C1, $row->C2, $row->C3, $row->C4, $row->C5);
+  $R[$row->id_alternative] = array($row->C1, $row->C2, $row->C3, $row->C4, $row->C5);
 }

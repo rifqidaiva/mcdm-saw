@@ -6,8 +6,7 @@ $name = $_POST['name'];
 $sql = "INSERT INTO saw_alternatives (name) VALUES ('$name')";
 
 if ($db->query($sql) === true) {
-    header("location:./alternatif.php");
+  header("location:./alternatif.php");
 } else {
-    echo "Error: " . $sql . "<br>" . $db->error;
+  echo "Error: " . $sql . "<br>" . $db->error;
 }
-

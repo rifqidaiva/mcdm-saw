@@ -8,8 +8,8 @@ $value = $_POST['value'];
 $sql = "INSERT INTO saw_evaluations values ('$id_alternative','$id_criteria','$value')";
 $result = $db->query($sql);
 
-if ($result === true) {
-    header("location:./matrik.php");
+if ($result) {
+  header("location:./matrik.php");
 } else {
-    echo "Error: " . $sql . "<br>" . $db->error;
+  echo "Error: " . $sql . "<br>" . $db->error;
 }
